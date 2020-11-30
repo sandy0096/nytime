@@ -3,8 +3,7 @@ module.exports = {
         URL: 'https://api.nytimes.com/svc/topstories/v2/',
         SEARCH: 'https://api.nytimes.com/svc/search/v2/articlesearch.json',
         KEY: 'r8240WTHxEvbAXNGC3LGHWnmwAACG1Sg',
-        PAGE: ['world', 'us', 'politics', 'nyregion', 'business', 'opinion', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'style', 'food', 'travel', 'magazine'],
-        NODE_ENV: 'production'
+        PAGE: ['world', 'us', 'politics', 'nyregion', 'business', 'opinion', 'technology', 'science', 'health', 'sports', 'arts', 'books', 'style', 'food', 'travel', 'magazine']
     },
     webpack: (config, options) => {
         config.module.rules.push({
