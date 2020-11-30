@@ -1,4 +1,5 @@
 module.exports = {
+    target: "serverless",
     env: {
         URL: 'https://api.nytimes.com/svc/topstories/v2/',
         SEARCH: 'https://api.nytimes.com/svc/search/v2/articlesearch.json',
