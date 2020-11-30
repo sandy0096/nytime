@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Canterbury";
+  src: url("/fonts/Canterbury/Canterbury.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: #D8EFF8;
+  padding: 0 2rem;
+}
+
+.contentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+}
+
+.title {
+  font-size: 60px;
+  font-family: "Canterbury";
+  padding: 1rem;
+  text-align: center;
+  cursor: default;
+}
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.today {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'monospace'; 
+    text-align: center;
+    display: block;
+}
+
+.searchNews {
+
+}
+
+.subsect {
+    cursor: pointer
+}
+
+.subsect:hover {
+    opacity: 0.5
+}

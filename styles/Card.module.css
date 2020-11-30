@@ -1,0 +1,54 @@
+.card {
+    background-color: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    height: min-content;
+    border-radius: 0.5rem;
+    width: 340px;
+    margin: 30px 0;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.02)
+}
+
+.cardTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    padding: 7px;
+}
+
+.cardSub {
+    font-size: 12px;
+    padding: 14px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.cardBy {
+    font-size: 13px;
+    padding: 14px;
+    display: inline-block;
+    width: 100%
+}
+
+.cardPublish {
+    font-size: 10px;
+    text-align: left;
+    padding: 14px
+}
+
+.cardSection {
+    float: right;
+    text-transform: capitalize;
+}
+
+.coverImage {
+    max-width: 100%;
+    height: auto;
+}
