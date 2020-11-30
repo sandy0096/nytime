@@ -1,5 +1,5 @@
 import styles from './../styles/Search.module.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { MONTHS } from './../data'
 
 const Heading = props => {
@@ -48,30 +48,29 @@ const SinglePane = props => {
 export default function Search(props) {
     const [data, setData] = useState([]);
     const [pagination, setPagination] = useState({ page: 0 })
+    const updatePage = useCallback((updatedPage) => {
+        if (updatedPage.page === 0) setData([]);
+        else setPagination(updatedPage);
+    }, []);
 
     const update = v => {
         if (v) {
-
             fetch(process.env.SEARCH + `?q=${v}` + `&page=${pagination.page}` + '&api-key=' + `${process.env.KEY}`)
                 .then(res => res.json())
                 .then(d => {
-                    if (pagination.page === 0) {
-                        setData(d.response.docs)
-                    }
-                    else setData(prevData => [...prevData, ...d.response.docs])
+                    setData(prevData => [...prevData, ...d.response.docs])
                 });
         }
     }
 
     useEffect(() => {
-        setPagination({ ...pagination, page: 0 })
-        setData([])
+        updatePage({ page: 0 })
         update(props.value)
     }, [props.value])
 
     const onNext = _ => {
         const np = { page: pagination.page + 1 }
-        setPagination(np);
+        updatePage(np);
         update(props.value);
     };
 
