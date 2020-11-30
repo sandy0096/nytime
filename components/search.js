@@ -70,15 +70,15 @@ export default function Search(props) {
     }, [props.value])
 
     const onNext = _ => {
-            const np = { page: pagination.page + 1 }
-            setPagination(np);
-            update(props.value);
+        const np = { page: pagination.page + 1 }
+        setPagination(np);
+        update(props.value);
     };
 
     return <div className={styles.container}>
         {data.length > 0 && data.map((item, i) => {
             return <SinglePane key={i} data={item} />
         })}
-        {data.length > 0 ? <div onClick={onNext} className={styles.showmore}>NEXT</div> : null}
+        {data.length > 0 ? <div onClick={onNext} className={styles.showmore}>MORE</div> : null}
     </div>
 }
